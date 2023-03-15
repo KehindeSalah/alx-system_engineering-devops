@@ -1,12 +1,2 @@
 #!/bin/bash
-# Set the field separator to ":" so that we can iterate through the directories in the PATH
-IFS=":"
-count=0
-
-# Loop through each directory in the PATH and increment the count for each directory
-for directory in $PATH; do
-  count=$((count + 1))
-done
-
-echo "The number of directories in the PATH is: $count"
-
+echo $(echo $PATH | tr ':' '\n' | wc -l)
