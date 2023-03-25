@@ -1,5 +1,3 @@
 #!/bin/bash
-
 echo "Third line of iacta"
 head -n 3 iacta | tail -n 1
-
